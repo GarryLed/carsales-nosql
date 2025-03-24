@@ -9,7 +9,7 @@ import { ICar } from '../interfaces/car';
 })
 export class CarApiService {
 
-private _siteURL = "http://localhost:5050"; // URL to Express server api 
+private _siteURL = "http://localhost:5050/cars"; // URL to Express server api 
 
   constructor(private _http:HttpClient ) {}
 

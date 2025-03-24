@@ -14,8 +14,8 @@ export class CarlistComponent {
 
   // declare variables
 
+  carsData:ICar[] | any;
   show:boolean = false;
-  carsData: ICar[] = [];
 
   // constructor to inject the service
   constructor(private _carAPIService:CarApiService) {}
