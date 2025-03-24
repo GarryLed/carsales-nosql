@@ -12,8 +12,10 @@ import { ICar, NewCar } from '../../interfaces/car';
 })
 export class CarlistComponent {
 
-  carsData:ICar[] = [];
-  show:boolean = false; 
+  // declare variables
+
+  show:boolean = false;
+  carsData: ICar[] = [];
 
   // constructor to inject the service
   constructor(private _carAPIService:CarApiService) {}

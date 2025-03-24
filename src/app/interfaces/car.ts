@@ -3,15 +3,23 @@ export interface ICar {
     make: string;
     model: string;
     year: string;
-    image: string;
+    imageURL: string;
   }
   
   export class NewCar implements ICar {
-    constructor(
-      public make: string,
-      public model: string,
-      public year: string,
-      public image: string
-    ) {}
+    _id!: string;
+    make: string;
+    model: string;
+    year: string;
+    imageURL: string;
+
+    constructor(make:string, model:string, year:string, imageURL:string) {
+      this.make = make;
+      this.model = model;
+      this.year = year;
+      this.imageURL = imageURL;
+    }
   }
+
+ 
   
