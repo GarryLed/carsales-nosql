@@ -25,6 +25,10 @@ export class CarlistComponent {
     this.getCars()
   }
 
+  refreshCars() {
+    this.getCars();
+  }
+
   // get the car details
   getCars() {
     this._carAPIService.getCarDetails().subscribe(carsData =>
@@ -40,6 +44,7 @@ export class CarlistComponent {
         { this.carsData = carsData}
       );
 
+      this.getCars()
       return false;
     }
 }
