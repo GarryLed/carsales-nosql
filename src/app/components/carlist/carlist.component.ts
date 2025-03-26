@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CarApiService } from '../../services/car-api.service';
 import { ICar, NewCar } from '../../interfaces/car';
+import { CarComponent } from '../car/car.component';
 
 
 @Component({
   selector: 'app-carlist',
-  imports: [CommonModule],
+  imports: [CommonModule, CarComponent],
   templateUrl: './carlist.component.html',
   styleUrl: './carlist.component.css'
 })
@@ -14,8 +15,8 @@ export class CarlistComponent {
 
   // declare variables
 
-  carsData:ICar[] | any;
-  show:boolean = false;
+  public carsData:ICar[] | any;
+  public show:boolean = false;
 
   // constructor to inject the service
   constructor(private _carAPIService:CarApiService) {}
